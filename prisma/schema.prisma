@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id            String   @id @default(uuid())
+  slug          String   @unique
+  title         String
+  client        String
+  year          String
+  role          String
+  category      String
+  shortDesc     String
+  longDesc      String
+  coverImage    String
+  galleryImages String   @default("[]") // JSON string array of URLs
+  videoUrl      String?
+  liveUrl       String?
+  repoUrl       String?
+  accentColor   String   @default("#C6FF3D")
+  featured      Boolean  @default(false)
+  published     Boolean  @default(true)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  company   String?
+  budget    String?
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model SiteSettings {
+  id           String   @id @default("default")
+  heroTitle    String   @default("WE BUILD WHAT OTHERS CAN'T UNLOCK.")
+  heroSubtitle String   @default("DEADLOCK is an elite software and motion laboratory.")
+  tagline      String   @default("We build what others can't unlock.")
+  contactEmail String   @default("ops@deadlock.studio")
+  contactPhone String?  @default("+1 (415) 890-5625")
+  whatsapp     String?  @default("+14158905625")
+  github       String?  @default("https://github.com/deadlock-studio")
+  twitter      String?  @default("https://twitter.com/deadlock_st")
+  linkedin     String?  @default("https://linkedin.com/company/deadlock-studio")
+  servicesJson String   @default("[]")
+  statsJson    String   @default("[]")
+  updatedAt    DateTime @updatedAt
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String   @default("Administrator")
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+}

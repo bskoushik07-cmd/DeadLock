@@ -1,0 +1,33 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0C080A"/>
+  <defs>
+    <radialGradient id="syn-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#FF3366" stopOpacity="0.22"/>
+      <stop offset="100%" stopColor="#070709" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="650" cy="400" r="380" fill="url(#syn-glow)"/>
+
+  <!-- Neural Synapse Nodes -->
+  <g stroke="#FF3366" stroke-width="1.5" opacity="0.7">
+    <line x1="300" y1="350" x2="500" y2="280"/>
+    <line x1="500" y1="280" x2="720" y2="340"/>
+    <line x1="720" y1="340" x2="880" y2="220"/>
+    <line x1="500" y1="280" x2="620" y2="480"/>
+    <line x1="620" y1="480" x2="840" y2="490"/>
+    <line x1="720" y1="340" x2="840" y2="490"/>
+    <line x1="840" y1="490" x2="1020" y2="380"/>
+  </g>
+
+  <circle cx="300" cy="350" r="10" fill="#FF3366"/>
+  <circle cx="500" cy="280" r="14" fill="#FF3366"/>
+  <circle cx="720" cy="340" r="18" fill="#FF3366"/>
+  <circle cx="880" cy="220" r="12" fill="#FF3366"/>
+  <circle cx="620" cy="480" r="16" fill="#FF3366"/>
+  <circle cx="840" cy="490" r="22" fill="#FF3366"/>
+  <circle cx="1020" cy="380" r="12" fill="#FF3366"/>
+
+  <text x="80" y="100" fill="#8A8A93" font-family="monospace" font-size="14" letter-spacing="3">03 // SYNAPSE COGNITIVE RUNTIME</text>
+  <text x="80" y="130" fill="#F4F4F0" font-family="sans-serif" font-weight="900" font-size="48" letter-spacing="-1">SPATIAL COMPUTING OS</text>
+  <text x="80" y="170" fill="#FF3366" font-family="monospace" font-size="14">NEURAL GRAPH MAPPING // LATENT SPACE</text>
+</svg>

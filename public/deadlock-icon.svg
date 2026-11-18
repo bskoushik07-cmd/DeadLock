@@ -1,0 +1,33 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="deadlock-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="shackle-grad-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+      <stop offset="100%" stopColor="#9C9CA4" stopOpacity="0.75" />
+    </linearGradient>
+    <linearGradient id="shackle-grad-right" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stopColor="#9C9CA4" stopOpacity="0.75" />
+      <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Form: Geometric D Hook -->
+  <path d="M 28 20 H 48 C 62 20, 68 28, 68 38 C 68 44, 65 47, 59 48 L 51 48 L 51 37 C 51 33, 47 30, 42 30 H 38 V 70 H 28 Z" fill="url(#shackle-grad-left)" stroke="#F4F4F0" stroke-width="0.8" stroke-linejoin="round" />
+  <path d="M 28 42 H 23 V 58 H 28 Z" fill="#8A8A93" opacity="0.4" />
+
+  <!-- Right Form: Inverted D Interlocking Hook -->
+  <path d="M 72 80 H 52 C 38 80, 32 72, 32 62 C 32 56, 35 53, 41 52 L 49 52 L 49 63 C 49 67, 53 70, 58 70 H 62 V 30 H 72 Z" fill="url(#shackle-grad-right)" stroke="#F4F4F0" stroke-width="0.8" stroke-linejoin="round" />
+  <path d="M 72 58 H 77 V 42 H 72 Z" fill="#8A8A93" opacity="0.4" />
+
+  <!-- Keyhole Core with Acid Lime Accent -->
+  <circle cx="50" cy="46" r="4.5" fill="#C6FF3D" filter="url(#deadlock-glow)" />
+  <path d="M 47.8 47.5 L 52.2 47.5 L 53.5 56.5 L 46.5 56.5 Z" fill="#C6FF3D" filter="url(#deadlock-glow)" />
+  <line x1="43" y1="50" x2="40" y2="50" stroke="#C6FF3D" stroke-width="0.8" opacity="0.6" />
+  <line x1="57" y1="50" x2="60" y2="50" stroke="#C6FF3D" stroke-width="0.8" opacity="0.6" />
+</svg>
